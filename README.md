@@ -1,198 +1,130 @@
 <div id="top"></div>
 <!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">AUTOSCALER</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Deploying a scalable microservice, API or web application in Docker!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/byolabisi/autoscaler/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/byolabisi/autoscaler/issues">Request/Add Feature</a>
   </p>
 </div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Suppose you have a microservice, API or web application that you need to deploy, but you are concerned about the possibility of your server not being capable of handling it. You could use AWS to scale horizontally your servers for you, the problem (and the biggest motivation for this project) is that AWS is expensive compared to another providers, for example, Digital Ocean, Linode, OVH, etc.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+A Digital Ocean (for now) and CloudFlare accounts. We will use CloudFlare DNS to load balance to your machines, so, be sure that the root domain you wanted exposed in scaleme config file is signed in your CloudFlare account.
 
-### Built With
+More details about the implementation can be found at the How it Works section in this page.
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Node.js is necessary to run this project. You should go to the Node.js Downloads Page and proceed with their instructions.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+Then, just clone this repository and start it using npm (Node package manager):
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+```sh
+git clone https://github.com/byolabisi/autoscaler.git
+cd autoscaler/
+sudo npm install -g
+```
+### Getting Started
+
+Now you can use autoscaler CLI to start, list, monitor and delete your projects.
+
+#### Starting a Project
+
+To start a project, first you must create a config file in any folder you want (check out ```config.sm```). The basic structure of this file is this:
+
+```javascript
+{
+	"project": "test", // project name
+	"git" : "https://github.com/byolabisi/extract_article.git", // docker container app
+	"port" : 3000, // port that your container runs
+	"digital_ocean" : {
+		"key": "YOUR_DO_KEY",
+		"region" : "nyc3",
+		"size": "512mb"
+	},
+	"cloudflare" : {
+		"email": "your@email.com",
+		"key": "YOU_CLOUDFLARE_KEY",
+		"domain": "test.example.com"
+	},
+	"scaler_rules": {
+		"min": 1, // min number of computers
+		"max": 3, // max number of computers
+		"interval" : 300, // interval to monitor and decide to scale (seconds)
+		"up": {
+			"metric": "cpu",
+			"rule": "gt",
+			"percent": 70
+		},
+		"down": {
+			"metric": "cpu",
+			"rule": "lt",
+			"percent": 10
+		}
+	}
+}
+```
 
 
+Then, run:
 
-<!-- USAGE EXAMPLES -->
-## Usage
+```sh
+sudo autoscaler -s config.sm
+```
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Your project will start and after a couple of minutes you can check it out using the domain you provided, in this example ```test.example.com```.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+#### Listing current projects
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+```sh
+sudo autoscaler -l
+```
 
+#### Get monitoring information of a project
 
+```sh
+sudo autoscaler -m project_name
+```
 
-<!-- ROADMAP -->
-## Roadmap
+#### Delete a project
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+```sh
+sudo autoscaler -d project_name
+```
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+### How it Works?
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+autoscaler initially deploy two machines, one called the ```scaler``` and another the ```slave```.
 
+The job of the ```scaler``` is to monitor the slave(s) using the rules defined in the config file, if the up rule is triggered then the scaler will deploy another slave machine if the maximum number of machines is not reached, and if the down rule is triggered it will delete one slave machine if the mininum number of machines is not reached.
 
+Besides, another job of the scaler is to get the slaves ips and sign them at the CloudFlare DNS so that your machines can be acessible from the domain you provided. The CloudFlare DNS act like a load balancer, since we have more than one ip from the same domain, the DNS will deliver this ips in a round-robin fashion, distributing the load among all the slaves you have at a given moment.
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+The job of the ```slave``` is straight-forward, it is your docker application with a monitoring API exposed to enable the scaler to request monitoring informations and make scaling decisions.
+.....
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -205,49 +137,3 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
