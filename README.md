@@ -28,9 +28,6 @@
 Suppose you have a microservice, API or web application that you need to deploy, but you are concerned about the possibility of your server not being capable of handling it. You could use AWS to scale horizontally your servers for you, the problem (and the biggest motivation for this project) is that AWS is expensive compared to another providers, for example, Digital Ocean, Linode, OVH, etc.
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 A Digital Ocean (for now) and CloudFlare accounts. We will use CloudFlare DNS to load balance to your machines, so, be sure that the root domain you wanted exposed in scaleme config file is signed in your CloudFlare account.
 
 More details about the implementation can be found at the How it Works section in this page.
@@ -125,9 +122,6 @@ Besides, another job of the scaler is to get the slaves ips and sign them at the
 
 The job of the ```slave``` is straight-forward, it is your docker application with a monitoring API exposed to enable the scaler to request monitoring informations and make scaling decisions.
 .....
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- LICENSE -->
