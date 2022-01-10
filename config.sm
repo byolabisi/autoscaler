@@ -1,0 +1,30 @@
+{
+	"project": "test", // project name
+	"git" : "https://github.com/byolabisi/extract_article.git", // example docker container app
+	"port" : 3000, // port that your container runs
+	"digital_ocean" : {
+		"key": "YOUR_DO_KEY",
+		"region" : "nyc3",
+		"size": "512mb"
+	},
+	"cloudflare" : {
+		"email": "your@email.com",
+		"key": "YOU_CLOUDFLARE_KEY",
+		"domain": "test.example.com"
+	},
+	"scaler_rules": {
+		"min": 1, // min number of computers
+		"max": 3, // max number of computers
+		"interval" : 300, // interval to monitor and decide to scale
+		"up": {
+			"metric": "cpu",
+			"rule": "gt",
+			"percent": 70
+		},
+		"down": {
+			"metric": "cpu",
+			"rule": "lt",
+			"percent": 10
+		}
+	}
+}
