@@ -8,7 +8,7 @@ var utils = require('./utils');
 var parseDomain = require('parse-domain');
 var CFClient = require('cloudflare');
 
-// file that we record all projects
+// file that will record all projects
 var file = __dirname + '/data/projects.json';
 
 var projects = readProjects();
@@ -166,7 +166,7 @@ function createMaster(obj, master_conf, cb) {
 	});
 }
 
-// get the name of the git project to make the folder
+// use the name of the git project to make the folder
 function splitGit(url) {
 	var tamanho = url.split("/").length;
 	var pre = url.split("/")[tamanho - 1];
