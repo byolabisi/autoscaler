@@ -114,13 +114,13 @@ sudo autoscaler -d project_name
 
 ### How it Works?
 
-autoscaler initially deploy two machines, one called the ```scaler``` and another the ```slave```.
+autoscaler initially deploy two machines, one called the ```scaler``` and another the ```secondary```.
 
-The job of the ```scaler``` is to monitor the slave(s) using the rules defined in the config file, if the up rule is triggered then the scaler will deploy another slave machine if the maximum number of machines is not reached, and if the down rule is triggered it will delete one slave machine if the mininum number of machines is not reached.
+The job of the ```scaler``` is to monitor the secondary(s) using the rules defined in the config file, if the up rule is triggered then the scaler will deploy another slave machine if the maximum number of machines is not reached, and if the down rule is triggered it will delete one slave machine if the mininum number of machines is not reached.
 
-Besides, another job of the scaler is to get the slaves ips and sign them at the CloudFlare DNS so that your machines can be acessible from the domain you provided. The CloudFlare DNS act like a load balancer, since we have more than one ip from the same domain, the DNS will deliver this ips in a round-robin fashion, distributing the load among all the slaves you have at a given moment.
+Besides, another job of the scaler is to get the slaves ips and sign them at the CloudFlare DNS so that your machines can be acessible from the domain you provided. The CloudFlare DNS act like a load balancer, since we have more than one ip from the same domain, the DNS will deliver this ips in a round-robin fashion, distributing the load among all the secondary(s) you have at a given moment.
 
-The job of the ```slave``` is straight-forward, it is your docker application with a monitoring API exposed to enable the scaler to request monitoring informations and make scaling decisions.
+The job of the ```secondary``` is straight-forward, it is your docker application with a monitoring API exposed to enable the scaler to request monitoring informations and make scaling decisions.
 .....
 
 
